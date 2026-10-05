@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+  --background: #fbfbfb;
+  --foreground: #111111;
+  --muted: #666666;
+  --border: #e5e5e5;
+  --card: #ffffff;
+}
+
+[data-theme='dark'] {
+  --background: #0d0d0d;
+  --foreground: #ededed;
+  --muted: #888888;
+  --border: #222222;
+  --card: #141414;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Monospace accents */
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
